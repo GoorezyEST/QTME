@@ -102,6 +102,7 @@ $neu_pressed: inset -4px -4px 5px #363636, inset 3px 3px 5px #282828;
 
     @media screen and (max-width: 900px) {
       grid-template-columns: 1fr;
+      margin-top: 1rem;
     }
 
     &_container {
