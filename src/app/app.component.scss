@@ -1,0 +1,163 @@
+$primary: #6cd457;
+$complement: rgb(230, 230, 230);
+
+// NeuphorphismTry //
+$neu_background: #303030;
+$neu_pressed: inset -4px -4px 5px #363636, inset 3px 3px 5px #282828;
+
+.cdmc {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $neu_background;
+  padding: 1rem;
+
+  &_header {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem 1.25rem 3rem;
+    background-color: $neu_background;
+    box-shadow: $neu_pressed;
+    border-radius: 0.25rem;
+    user-select: none;
+
+    @media screen and (max-width: 350px) {
+      padding: 0.75rem 2.75rem 1rem 2.75rem;
+    }
+
+    & h1 {
+      font-weight: 900;
+      color: $complement;
+      font-size: 2.5rem;
+
+      @media screen and (max-width: 350px) {
+        font-size: 2rem;
+      }
+    }
+
+    & p {
+      font-weight: 600;
+      color: $primary;
+      opacity: 0.75;
+      font-size: 1rem;
+
+      @media screen and (max-width: 350px) {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  &_fun {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_button {
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      cursor: pointer;
+      outline: none;
+      background-color: $neu_background;
+      box-shadow: $neu_pressed;
+      border: none;
+      color: $complement;
+      border-radius: 0.25rem;
+      transition: all 0.2s;
+
+      &:active {
+        transform: scale(0.95);
+      }
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    &_text {
+      user-select: none;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, 150%);
+      width: max-content;
+      color: $complement;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  &_data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    height: max-content;
+    width: max-content;
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+
+    &_container {
+      background-color: $neu_background;
+      box-shadow: $neu_pressed;
+      border-radius: 0.25rem;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      padding: 0 1rem;
+      user-select: none;
+      transition: all 0.3s;
+      height: 200px;
+      width: 300px;
+
+      @media screen and (max-width: 900px) {
+        height: 200px;
+        width: 300px;
+      }
+
+      @media screen and (max-width: 350px) {
+        height: 200px;
+        width: 250px;
+      }
+
+      &_header {
+        font-size: 1.75rem;
+        color: $complement;
+        font-weight: 700;
+
+        @media screen and (max-width: 350px) {
+          font-size: 1.25rem;
+        }
+      }
+
+      &_text {
+        font-size: 1rem;
+        color: $complement;
+        font-weight: 500;
+
+        @media screen and (max-width: 350px) {
+          font-size: 0.75rem;
+        }
+      }
+
+      &_price {
+        font-size: 1.5rem;
+        color: $primary;
+        font-weight: 700;
+
+        @media screen and (max-width: 350px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
